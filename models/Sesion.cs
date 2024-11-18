@@ -6,11 +6,11 @@ public class Sesion
     public int Id { get; private set; }
     public string IdSala { get; set; }
     public int AsientosRestantes {get; set;}
-    public List<Asientos> ListaAsientos { get; set; } = new List<Asientos>();
+    public List<Asiento> ListaAsientos { get; set; } = new List<Asiento>();
     public Pelicula Pelicula { get; set; }
     public Sala Sala { get; set; }
 
-    public Sesion(string idSala, List<Asientos> asientos, Pelicula pelicula, Sala sala)
+    public Sesion(string idSala, List<Asiento> asientos, Pelicula pelicula, Sala sala)
     {
         Id = contadorId++;
         IdSala = idSala;
