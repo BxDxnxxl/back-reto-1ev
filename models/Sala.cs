@@ -8,12 +8,14 @@ public class Sala
     public int Id { get; private set; }
     public string Numero { get; set; }
     public string Tipo { get; set; }
+    public int Capacidad{ get; set; }
 
-    public Sala(string numero, string tipo)
+    public Sala(string numero, string tipo, int capacidad)
     {
         Id = contadorId++;
         Numero = numero;
         Tipo = tipo;
+        Capacidad = capacidad;
     }
 
     public void MostrarInformacion()
@@ -21,5 +23,6 @@ public class Sala
         Console.WriteLine($"ID: {Id}");
         Console.WriteLine($"Numero: {Numero}");
         Console.WriteLine($"Tipo: {Tipo}");
+        Console.WriteLine($"Capacidad: {Capacidad}");
     }
 }

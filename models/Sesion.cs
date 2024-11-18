@@ -7,13 +7,17 @@ public class Sesion
     public string IdSala { get; set; }
     public int AsientosRestantes {get; set;}
     public List<Asientos> ListaAsientos { get; set; } = new List<Asientos>();
+    public Pelicula Pelicula { get; set; }
+    public Sala Sala { get; set; }
 
-    public Sesion(string idSala, List<Asientos> asientos)
+    public Sesion(string idSala, List<Asientos> asientos, Pelicula pelicula, Sala sala)
     {
         Id = contadorId++;
         IdSala = idSala;
         ListaAsientos = asientos;
-        AsientosRestantes = asientos.Count;
+        AsientosRestantes = Sala.Capacidad;
+        Pelicula = pelicula;
+        Sala = sala;
     }
 
     public void EliminarAsientos(int numAsientos){
