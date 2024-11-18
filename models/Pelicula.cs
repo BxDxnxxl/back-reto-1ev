@@ -11,10 +11,12 @@ public class Pelicula
     public string Director { get; set; }
     public string[] Categorias { get; set; }
     public DateTime AnioDeSalida { get; set; }
-    public string ImagenUrl { get; set; }
+    public string ImagenBannerUrl { get; set; }
+    public string ImagenPequeniaUrl { get; set; }
     public string Duracion { get; set; }
+    public string Valoracion {get; set;}
 
-    public Pelicula(string nombre, string descripcion, string director, string[] categorias, DateTime anioDeSalida, string imagenUrl, string duracion)
+    public Pelicula(string nombre, string descripcion, string director, string[] categorias, DateTime anioDeSalida, string imagenBannerUrl, string imagenPequeniaUrl, string duracion, string valoracion)
     {
         Id = contadorId++;
         Nombre = nombre;
@@ -22,8 +24,10 @@ public class Pelicula
         Director = director;
         Categorias = categorias;
         AnioDeSalida = anioDeSalida;
-        ImagenUrl = imagenUrl;
+        ImagenBannerUrl = imagenBannerUrl;
+        ImagenPequeniaUrl = imagenPequeniaUrl;
         Duracion = duracion;
+        Valoracion = valoracion;
     }
 
     public void MostrarInformacion()
