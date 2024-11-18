@@ -9,7 +9,7 @@ public class Asiento
     public string Tipo { get; set; }
     public bool Estado { get; set; }
     
-    public Asientos(string tipo, bool estado)
+    public Asiento(string tipo, bool estado)
     {
         Id = contadorId++;
         Tipo = tipo;

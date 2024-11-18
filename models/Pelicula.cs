@@ -38,7 +38,6 @@ public class Pelicula
         Console.WriteLine($"Director: {Director}");
         Console.WriteLine("Categorías: " + string.Join(", ", Categorias));
         Console.WriteLine($"Año de Salida: {AnioDeSalida.Year}");
-        Console.WriteLine($"Imagen: {ImagenUrl}");
         Console.WriteLine($"Duración: {Duracion}");
     }
 }
