@@ -25,7 +25,7 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Mi API", Version = "v1" });
 });
 
-PeliculaController.InicializarDatos();
+InicializadorDatos.InicializarDatos();
 var app = builder.Build();
 
 //if (app.Environment.IsDevelopment())
