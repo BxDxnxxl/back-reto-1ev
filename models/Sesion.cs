@@ -12,8 +12,10 @@ public class Sesion
     public double Precio {get; set;}
     public string TipoSala {get; set;}
     public double Descuento {get; set;}
+    public DateTime FechaInicio {get; set;}
+    public DateTime FechaFin {get; set;}
 
-    public Sesion(string idSala, List<Asiento> asientos, Pelicula pelicula, Sala sala, string tipoSala, double descuento)
+    public Sesion(string idSala, List<Asiento> asientos, Pelicula pelicula, Sala sala, string tipoSala, double descuento, DateTime fechaInicio)
     {
         Id = contadorId++;
         IdSala = idSala;
@@ -23,6 +25,8 @@ public class Sesion
         Sala = sala;
         TipoSala = tipoSala;
         Descuento = descuento;
+        FechaInicio = fechaInicio;
+        FechaFin = FechaInicio.AddMinutes(Pelicula.Duracion + 10);
 
     }
 
