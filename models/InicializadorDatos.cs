@@ -14,6 +14,7 @@ public static class InicializadorDatos
 
     private static void InicializarPeliculas()
     {
+        
         DataStore.Peliculas.AddRange(new List<Pelicula>
         {
             new Pelicula(
@@ -22,8 +23,8 @@ public static class InicializadorDatos
                 director: "Anthony y Joe Russo",
                 categorias: new[] { "Acción", "Ciencia Ficción", "Superhéroes" },
                 anioDeSalida: new DateTime(2018, 4, 27),
-                imagenBannerUrl: "https://example.com/infinitywar-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/infinitywar-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "2h 40m",
                 valoracion: "8.5"
             ),
@@ -33,8 +34,8 @@ public static class InicializadorDatos
                 director: "Dean DeBlois",
                 categorias: new[] { "Animación", "Fantasía", "Aventura" },
                 anioDeSalida: new DateTime(2019, 2, 22),
-                imagenBannerUrl: "https://example.com/dragons3-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/dragons3-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "1h 45m",
                 valoracion: "8.0"
             ),
@@ -44,8 +45,8 @@ public static class InicializadorDatos
                 director: "David Gordon Green",
                 categorias: new[] { "Terror", "Suspenso" },
                 anioDeSalida: new DateTime(2018, 10, 19),
-                imagenBannerUrl: "https://example.com/halloween2018-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/halloween2018-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "1h 45m",
                 valoracion: "7.0"
             ),
@@ -55,8 +56,8 @@ public static class InicializadorDatos
                 director: "David Gordon Green",
                 categorias: new[] { "Terror", "Suspenso" },
                 anioDeSalida: new DateTime(2021, 10, 15),
-                imagenBannerUrl: "https://example.com/halloweenkills-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/halloweenkills-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "1h 45m",
                 valoracion: "6.5"
             ),
@@ -66,8 +67,8 @@ public static class InicializadorDatos
                 director: "David Gordon Green",
                 categorias: new[] { "Terror", "Suspenso" },
                 anioDeSalida: new DateTime(2022, 10, 14),
-                imagenBannerUrl: "https://example.com/halloweenends-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/halloweenends-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "1h 50m",
                 valoracion: "6.0"
             ),
@@ -77,8 +78,8 @@ public static class InicializadorDatos
                 director: "Christopher Nolan",
                 categorias: new[] { "Ciencia Ficción", "Acción", "Thriller" },
                 anioDeSalida: new DateTime(2020, 8, 26),
-                imagenBannerUrl: "https://example.com/tenet-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/tenet-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "2h 30m",
                 valoracion: "7.4"
             ),
@@ -88,8 +89,8 @@ public static class InicializadorDatos
                 director: "Christopher Nolan",
                 categorias: new[] { "Ciencia Ficción", "Drama" },
                 anioDeSalida: new DateTime(2014, 11, 7),
-                imagenBannerUrl: "https://example.com/interstellar-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/interstellar-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "2h 49m",
                 valoracion: "8.6"
             ),
@@ -99,8 +100,8 @@ public static class InicializadorDatos
                 director: "Chad Stahelski",
                 categorias: new[] { "Acción", "Thriller" },
                 anioDeSalida: new DateTime(2014, 10, 24),
-                imagenBannerUrl: "https://example.com/johnwick-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/johnwick-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "1h 41m",
                 valoracion: "7.4"
             ),
@@ -110,18 +111,23 @@ public static class InicializadorDatos
                 director: "George Miller",
                 categorias: new[] { "Acción", "Aventura", "Ciencia Ficción" },
                 anioDeSalida: new DateTime(2015, 5, 15),
-                imagenBannerUrl: "https://example.com/madmax-banner.jpg",
-                imagenPequeniaUrl: "https://example.com/madmax-small.jpg",
+                imagenBannerUrl: "",
+                imagenPequeniaUrl: "",
                 duracion: "2h",
                 valoracion: "8.1"
             ),
             
         });
     }
-
+    
     private static void InicializarSalas()
     {
        
+    }
+
+    private static void InicializarButacas()
+    {
+        
     }
 
     private static void InicializarSesiones()
@@ -129,8 +135,5 @@ public static class InicializadorDatos
         
     }
 
-    private static void InicializarButacas()
-    {
-        
-    }
+   
 }
