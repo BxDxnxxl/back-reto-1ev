@@ -81,10 +81,10 @@ namespace back.Controllers
             {
                 pelicula.ImagenPequeniaUrl = peliculaActualizada.ImagenPequeniaUrl;
             }
-            if (!string.IsNullOrWhiteSpace(peliculaActualizada.Duracion))
+            /*if (!string.IsNullOrWhiteSpace(peliculaActualizada.Duracion))
             {
                 pelicula.Duracion = peliculaActualizada.Duracion;
-            }
+            }*/
             if (!string.IsNullOrWhiteSpace(peliculaActualizada.Valoracion))
             {
                 pelicula.Valoracion = peliculaActualizada.Valoracion;
