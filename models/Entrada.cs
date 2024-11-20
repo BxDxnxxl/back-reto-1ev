@@ -3,7 +3,6 @@ namespace models;
 
 public class Entrada
 {
-    private static int contadorId = 1;
 
     public string Id { get; private set; }
     public Usuario Usuario { get; set; }

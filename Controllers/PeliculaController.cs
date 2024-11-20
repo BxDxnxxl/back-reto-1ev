@@ -84,14 +84,14 @@ namespace back.Controllers
             /*if (!string.IsNullOrWhiteSpace(peliculaActualizada.Duracion))
             {
                 pelicula.Duracion = peliculaActualizada.Duracion;
-            }*/
+            }
             if (!string.IsNullOrWhiteSpace(peliculaActualizada.Valoracion))
             {
                 pelicula.Valoracion = peliculaActualizada.Valoracion;
-            }
+            }*/
 
             return NoContent();
-        }
+    }
 
     //metodo para borrar una pelicula
     [HttpDelete("{id}")]
@@ -132,6 +132,14 @@ namespace back.Controllers
 
         // en caso de haber peliculas que coinciden con esta categoria, las mostramos
         return Ok(peliculasFiltradas);
+    }
+
+    [HttpGet("top5")]
+    public ActionResult<IEnumerable<Pelicula>> GetTop5Peliculas()
+    {
+        var pelis = DataStore.Peliculas.OrderByDescending(p => p.Valoracion).Take(5).ToList();
+
+        return Ok(pelis);
     }
 
     }
