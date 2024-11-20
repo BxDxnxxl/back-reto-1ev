@@ -209,7 +209,7 @@ public static class InicializadorDatos
                 imagenBannerUrl: "smile2png.png",
                 imagenPequeniaUrl: "",
                 duracion: 115,
-                valoracion: 7.80
+                valoracion: 8.76
             ),
 
             new Pelicula(
@@ -221,7 +221,7 @@ public static class InicializadorDatos
                 imagenBannerUrl: "robot_salvaje.jpg",
                 imagenPequeniaUrl: "",
                 duracion: 125,
-                valoracion: 7.50
+                valoracion: 8.8
             ),
 
             new Pelicula(
@@ -233,7 +233,7 @@ public static class InicializadorDatos
                 imagenBannerUrl: "venom-the-last-dance.png",
                 imagenPequeniaUrl: "",
                 duracion: 135,
-                valoracion: 7.20
+                valoracion: 8.85
             ),
 
             new Pelicula(
@@ -245,7 +245,7 @@ public static class InicializadorDatos
                 imagenBannerUrl: "terrifier-3-4245154.png",
                 imagenPequeniaUrl: "",
                 duracion: 108,
-                valoracion: 7.90
+                valoracion: 8.9
             ),
 
         });
