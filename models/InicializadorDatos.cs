@@ -34,7 +34,7 @@ public static class InicializadorDatos
                 director: "Dean DeBlois",
                 categorias: new[] { "Animación", "Fantasía", "Aventura" },
                 anioDeSalida: new DateTime(2019, 2, 22),
-                imagenBannerUrl: "",
+                imagenBannerUrl: "httyd3.png",
                 imagenPequeniaUrl: "",
                 duracion: 105,
                 valoracion: 9.00
@@ -206,7 +206,7 @@ public static class InicializadorDatos
                 director: "Parker Finn",
                 categorias: new[] { "Terror", "Thriller" },
                 anioDeSalida: new DateTime(2024, 10, 13),
-                imagenBannerUrl: "",
+                imagenBannerUrl: "smile2png.png",
                 imagenPequeniaUrl: "",
                 duracion: 115,
                 valoracion: 7.80
@@ -218,7 +218,7 @@ public static class InicializadorDatos
                 director: "Neil Blomkamp",
                 categorias: new[] { "Ciencia Ficción", "Acción", "Drama" },
                 anioDeSalida: new DateTime(2024, 6, 10),
-                imagenBannerUrl: "",
+                imagenBannerUrl: "robot_salvaje.jpg",
                 imagenPequeniaUrl: "",
                 duracion: 125,
                 valoracion: 7.50
@@ -230,7 +230,7 @@ public static class InicializadorDatos
                 director: "Kelly Marcel",
                 categorias: new[] { "Acción", "Ciencia Ficción", "Superhéroes" },
                 anioDeSalida: new DateTime(2024, 7, 12),
-                imagenBannerUrl: "",
+                imagenBannerUrl: "venom-the-last-dance.png",
                 imagenPequeniaUrl: "",
                 duracion: 135,
                 valoracion: 7.20
@@ -242,7 +242,7 @@ public static class InicializadorDatos
                 director: "Damien Leone",
                 categorias: new[] { "Terror", "Suspenso", "Gore" },
                 anioDeSalida: new DateTime(2024, 11, 1),
-                imagenBannerUrl: "",
+                imagenBannerUrl: "terrifier-3-4245154.png",
                 imagenPequeniaUrl: "",
                 duracion: 108,
                 valoracion: 7.90
