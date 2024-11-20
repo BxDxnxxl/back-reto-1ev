@@ -201,52 +201,53 @@ public static class InicializadorDatos
             ),
 
             new Pelicula(
-                nombre: "1917",
-                descripcion: "Dos soldados británicos reciben una misión para entregar un mensaje vital durante la Primera Guerra Mundial.",
-                director: "Sam Mendes",
-                categorias: new[] { "Drama", "Guerra", "Historia" },
-                anioDeSalida: new DateTime(2019, 12, 25),
+                nombre: "Smile 2",
+                descripcion: "Una nueva ola de terror psicológico amenaza a quienes presencian eventos inexplicables y aterradores.",
+                director: "Parker Finn",
+                categorias: new[] { "Terror", "Thriller" },
+                anioDeSalida: new DateTime(2024, 10, 13),
                 imagenBannerUrl: "",
                 imagenPequeniaUrl: "",
-                duracion: 119,
-                valoracion: 8.30
+                duracion: 115,
+                valoracion: 7.80
             ),
 
             new Pelicula(
-                nombre: "El Hombre Invisible",
-                descripcion: "Una mujer cree que su abusivo exnovio se ha vuelto invisible para atormentarla.",
-                director: "Leigh Whannell",
-                categorias: new[] { "Terror", "Ciencia Ficción", "Suspenso" },
-                anioDeSalida: new DateTime(2020, 2, 28),
+                nombre: "Robot Salvaje",
+                descripcion: "Un robot diseñado para la guerra encuentra un propósito inesperado al proteger a una comunidad en peligro.",
+                director: "Neil Blomkamp",
+                categorias: new[] { "Ciencia Ficción", "Acción", "Drama" },
+                anioDeSalida: new DateTime(2024, 6, 10),
                 imagenBannerUrl: "",
                 imagenPequeniaUrl: "",
-                duracion: 124,
-                valoracion: 7.10
+                duracion: 125,
+                valoracion: 7.50
             ),
 
             new Pelicula(
-                nombre: "Soul",
-                descripcion: "Un músico de jazz busca encontrar el propósito de su vida después de un accidente inesperado.",
-                director: "Pete Docter, Kemp Powers",
-                categorias: new[] { "Animación", "Fantasía", "Aventura" },
-                anioDeSalida: new DateTime(2020, 12, 25),
+                nombre: "Venom 3",
+                descripcion: "Eddie Brock y Venom enfrentan un nuevo enemigo con el poder de alterar la realidad misma.",
+                director: "Kelly Marcel",
+                categorias: new[] { "Acción", "Ciencia Ficción", "Superhéroes" },
+                anioDeSalida: new DateTime(2024, 7, 12),
                 imagenBannerUrl: "",
                 imagenPequeniaUrl: "",
-                duracion: 100,
-                valoracion: 8.10
+                duracion: 135,
+                valoracion: 7.20
             ),
 
             new Pelicula(
-                nombre: "Parasite",
-                descripcion: "Una familia pobre se infiltra en la vida de una familia rica con consecuencias inesperadas.",
-                director: "Bong Joon-ho",
-                categorias: new[] { "Drama", "Comedia Negra", "Thriller" },
-                anioDeSalida: new DateTime(2019, 5, 30),
+                nombre: "Terrifier 3",
+                descripcion: "El payaso Art regresa para sembrar el caos con nuevas víctimas en una ciudad aterrorizada.",
+                director: "Damien Leone",
+                categorias: new[] { "Terror", "Suspenso", "Gore" },
+                anioDeSalida: new DateTime(2024, 11, 1),
                 imagenBannerUrl: "",
                 imagenPequeniaUrl: "",
-                duracion: 132,
-                valoracion: 8.60
+                duracion: 108,
+                valoracion: 7.90
             ),
+
         });
     }
     
