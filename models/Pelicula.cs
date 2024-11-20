@@ -14,9 +14,9 @@ public class Pelicula
     public string ImagenBannerUrl { get; set; }
     public string ImagenPequeniaUrl { get; set; }
     public int Duracion { get; set; }
-    public string Valoracion {get; set;}
+    public double Valoracion {get; set;}
 
-    public Pelicula(string nombre, string descripcion, string director, string[] categorias, DateTime anioDeSalida, string imagenBannerUrl, string imagenPequeniaUrl, int duracion, string valoracion)
+    public Pelicula(string nombre, string descripcion, string director, string[] categorias, DateTime anioDeSalida, string imagenBannerUrl, string imagenPequeniaUrl, int duracion, double valoracion)
     {
         Id = contadorId++;
         Nombre = nombre;
