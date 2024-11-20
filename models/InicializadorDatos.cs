@@ -14,7 +14,7 @@ public static class InicializadorDatos
 
     private static void InicializarPeliculas()
     {
-        
+
         DataStore.Peliculas.AddRange(new List<Pelicula>
         {
             new Pelicula(
@@ -250,21 +250,51 @@ public static class InicializadorDatos
 
         });
     }
-    
+
     private static void InicializarSalas()
     {
-       
+        DataStore.Salas.AddRange(new List<Sala>{
+            new Sala(
+                numero: "1",
+                tipo: "3D",
+                capacidad: 30
+            ),
+
+            new Sala(
+                numero: "2",
+                tipo: "Estandar",
+                capacidad: 50
+            ),
+
+            new Sala(
+                numero: "3",
+                tipo: "3D",
+                capacidad: 30
+            ),
+
+            new Sala(
+                numero: "4",
+                tipo: "Estandar",
+                capacidad: 30
+            ),
+
+            new Sala(
+                numero: "5",
+                tipo: "Audio Dolby",
+                capacidad: 40
+            ),
+        });
     }
 
     private static void InicializarButacas()
     {
-        
+
     }
 
     private static void InicializarSesiones()
     {
-        
+
     }
 
-   
+
 }
