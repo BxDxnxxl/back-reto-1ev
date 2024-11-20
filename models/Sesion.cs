@@ -4,26 +4,24 @@ public class Sesion
 {
     private static int contadorId = 1;
     public int Id { get; private set; }
-    public string IdSala { get; set; }
+    public int IdSala { get; set; }
     public int AsientosRestantes {get; set;}
     public List<Asiento> ListaAsientos { get; set; } = new List<Asiento>();
     public Pelicula Pelicula { get; set; }
     public Sala Sala { get; set; }
     public double Precio {get; set;}
-    public string TipoSala {get; set;}
     public double Descuento {get; set;}
     public DateTime FechaInicio {get; set;}
     public DateTime FechaFin {get; set;}
 
-    public Sesion(string idSala, List<Asiento> asientos, Pelicula pelicula, Sala sala, string tipoSala, double descuento, DateTime fechaInicio)
+    public Sesion(List<Asiento> asientos, Pelicula pelicula, Sala sala, double descuento, DateTime fechaInicio)
     {
         Id = contadorId++;
-        IdSala = idSala;
+        IdSala = Sala.Id;
         ListaAsientos = asientos;
         AsientosRestantes = Sala.Capacidad;
         Pelicula = pelicula;
         Sala = sala;
-        TipoSala = tipoSala;
         Descuento = descuento;
         FechaInicio = fechaInicio;
         FechaFin = FechaInicio.AddMinutes(Pelicula.Duracion + 10);
@@ -36,7 +34,7 @@ public class Sesion
 
     public void CalcularPrecio()
     {
-        switch (TipoSala)
+        switch (Sala.Tipo)
         {
             case "Estandar":
                 Precio = 6.00; 
