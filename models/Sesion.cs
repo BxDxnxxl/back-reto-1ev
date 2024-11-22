@@ -14,14 +14,13 @@ public class Sesion
     public DateTime FechaInicio {get; set;}
     public DateTime FechaFin {get; set;}
 
-    public Sesion(List<Asiento> asientos, Pelicula pelicula, Sala sala, double descuento, DateTime fechaInicio)
+    public Sesion(Pelicula pelicula, Sala sala, double descuento, DateTime fechaInicio)
     {
         Id = contadorId++;
+        Sala = sala;
         IdSala = Sala.Id;
-        ListaAsientos = asientos;
         AsientosRestantes = Sala.Capacidad;
         Pelicula = pelicula;
-        Sala = sala;
         Descuento = descuento;
         FechaInicio = fechaInicio;
         FechaFin = FechaInicio.AddMinutes(Pelicula.Duracion + 10);
@@ -30,6 +29,15 @@ public class Sesion
 
     public void EliminarAsientos(int numAsientos){
         AsientosRestantes = AsientosRestantes - numAsientos;
+    }
+
+     public void AnadirAsientos()
+    {
+        for (int i = 0; i < Sala.Capacidad; i++)
+        {
+            Asiento nuevoAsiento = new Asiento(true);
+            ListaAsientos.Add(nuevoAsiento);
+        }
     }
 
     public void CalcularPrecio()
