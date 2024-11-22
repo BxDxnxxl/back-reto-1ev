@@ -9,7 +9,6 @@ public static class InicializadorDatos
         InicializarPeliculas();
         InicializarSalas();
         InicializarSesiones();
-        InicializarButacas();
     }
 
     private static void InicializarPeliculas()
@@ -277,15 +276,31 @@ public static class InicializadorDatos
         });
     }
 
-    private static void InicializarButacas()
-    {
-
-    }
-
     private static void InicializarSesiones()
     {
+        Random random = new Random();
+        DateTime fechaBase = new DateTime(2024, 11, 22);
 
+        for (int i = 0; i < 50; i++)
+        {
+    
+            var pelicula = DataStore.Peliculas[random.Next(DataStore.Peliculas.Count)];
+            var sala = DataStore.Salas[random.Next(DataStore.Salas.Count)];
+
+            double descuento = Math.Round(random.NextDouble() * 0.5, 2);
+
+            DateTime fechaInicio = fechaBase.AddMinutes(random.Next(0, 1440));
+
+            Sesion sesion = new Sesion(
+                pelicula: pelicula,
+                sala: sala,
+                descuento: descuento,
+                fechaInicio: fechaInicio
+            );
+            sesion.CalcularPrecio();
+            sesion.AnadirAsientos();
+            DataStore.Sesiones.Add(sesion);
+        }
     }
-
 
 }

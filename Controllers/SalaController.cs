@@ -9,7 +9,6 @@ namespace back.Controllers
     [Route("[controller]")]
     public class SalaController : ControllerBase
     {
-        private static List<Sala> Salas = new List<Sala>();
 
         // Método para obtener todas las salas
         [HttpGet]
@@ -40,9 +39,6 @@ namespace back.Controllers
 
         // Método para actualizar una sala
         [HttpPut("{id}")]
-
-
-
 
         // Método para eliminar una sala
         [HttpDelete("{id}")]
