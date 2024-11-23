@@ -57,5 +57,16 @@ namespace back.Controllers
             return NoContent();
         }
 
+        [HttpGet("sesionesPelicula/{idPelicula}")]
+        public ActionResult<Sesion> GetSesionesPelicula(int idPelicula)
+        {
+            var sesiones = DataStore.Sesiones.Where(s => s.Pelicula.Id == idPelicula).ToList();
+            if (sesiones == null)
+            {
+                return NotFound();
+            }
+            return Ok(sesiones);
+        }
+
     }
 }
