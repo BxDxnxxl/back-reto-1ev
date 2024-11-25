@@ -6,17 +6,17 @@ public class Asiento
     private static int contadorId = 1;
 
     public int Id { get; private set; }
-    public bool Estado { get; set; }
+    public bool Ocupado { get; set; }
     
-    public Asiento(bool estado)
+    public Asiento(bool ocupado)
     {
         Id = contadorId++;
-        Estado = estado;
+        Ocupado = ocupado;
     }
 
     public void MostrarInformacion()
     {
         Console.WriteLine($"ID: {Id}");
-        Console.WriteLine($"Estado: {Estado}");
+        Console.WriteLine($"Estado: {Ocupado}");
     }
 }
