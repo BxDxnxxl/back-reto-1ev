@@ -35,7 +35,7 @@ public class Sesion
     {
         for (int i = 0; i < Sala.Capacidad; i++)
         {
-            Asiento nuevoAsiento = new Asiento(true);
+            Asiento nuevoAsiento = new Asiento(false);
             ListaAsientos.Add(nuevoAsiento);
         }
     }
