@@ -109,28 +109,27 @@ namespace back.Controllers
     }
 
     //filtrar peliculas por categorias
-    [HttpGet("categoria/{categoria}")]
-    public ActionResult<IEnumerable<Pelicula>> GetPeliculasPorCategoria(string categoria)
+    [HttpGet("categoria/{categoriaId}")]
+    public ActionResult<IEnumerable<Pelicula>> GetPeliculasPorCategoria(int categoriaId)
     {
-        //lista que alamcenará ñas peliculas filtradas
+        // Lista que almacenará las películas filtradas
         var peliculasFiltradas = new List<Pelicula>();
 
-        // con el foreach se comprobará cada pelicula existente si contiene las categorias
+        // Comprobación de cada película para ver si contiene la categoría
         foreach (var pelicula in DataStore.Peliculas)
         {
-            if (pelicula.Categorias.Contains(categoria))
+            if (pelicula.Categorias.Any(c => c.Id == categoriaId))
             {
                 peliculasFiltradas.Add(pelicula);
             }
         }
 
-        //en caso de no haber ninguna pelicula, controlamos el posible error
         if (peliculasFiltradas.Count == 0)
         {
-            return NotFound($"No se encontraron películas en la categoría '{categoria}'.");
+            return NotFound($"No se encontraron películas en la categoría con ID '{categoriaId}'.");
         }
 
-        // en caso de haber peliculas que coinciden con esta categoria, las mostramos
+        // Devolvemos las películas que coinciden
         return Ok(peliculasFiltradas);
     }
 
