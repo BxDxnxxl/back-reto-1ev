@@ -115,7 +115,6 @@ namespace back.Controllers
         // Lista que almacenará las películas filtradas
         var peliculasFiltradas = new List<Pelicula>();
 
-        // Comprobación de cada película para ver si contiene la categoría
         foreach (var pelicula in DataStore.Peliculas)
         {
             if (pelicula.Categorias.Any(c => c.Id == categoriaId))
@@ -129,7 +128,7 @@ namespace back.Controllers
             return NotFound($"No se encontraron películas en la categoría con ID '{categoriaId}'.");
         }
 
-        // Devolvemos las películas que coinciden
+
         return Ok(peliculasFiltradas);
     }
 
