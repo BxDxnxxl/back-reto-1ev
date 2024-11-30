@@ -57,7 +57,7 @@ namespace back.Controllers
             return NoContent();
         }
 
-        [HttpGet("sesionesPelicula/{idPelicula}")]
+        [HttpGet("Pelicula/{idPelicula}/Sesiones")]
         public ActionResult<Sesion> GetSesionesPelicula(int idPelicula)
         {
             var sesiones = DataStore.Sesiones.Where(s => s.Pelicula.Id == idPelicula).ToList();
@@ -68,7 +68,7 @@ namespace back.Controllers
             return Ok(sesiones);
         }
 
-        [HttpPut("actualizarAsientos/{idSesion}")]
+        [HttpPut("{idSesion}/actualizarAsientos/")]
         public IActionResult ActualizarAsientos(int idSesion, [FromBody] List<int> asientosIds)
         {
             var sesion = DataStore.Sesiones.FirstOrDefault(s => s.Id == idSesion);
