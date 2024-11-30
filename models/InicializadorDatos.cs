@@ -6,32 +6,57 @@ public static class InicializadorDatos
 {
     public static void InicializarDatos()
     {
+        InicializarCategorias();
         InicializarPeliculas();
         InicializarSalas();
         InicializarSesiones();
     }
 
+    //poner ambos inicializadores de categorias antes que los de peliculas para corregir error de que no encuentre categorias
+    private static void InicializarCategorias()
+    {
+        DataStore.Categorias.AddRange(new List<Categoria>
+        {
+        new Categoria("Acción"),
+        new Categoria("Ciencia Ficción"),
+        new Categoria("Superhéroes"),
+        new Categoria("Animación"),
+        new Categoria("Fantasía"),
+        new Categoria("Aventura"),
+        new Categoria("Terror"),
+        new Categoria("Suspenso"),
+        new Categoria("Thriller"),
+        new Categoria("Drama"),
+        new Categoria("Musical"),
+        new Categoria("Crimen"),
+        new Categoria("Gore"),
+        new Categoria("Misterio"),
+        new Categoria("Romance"),
+        new Categoria("Comedia")
+        });
+    }
+
     private static void InicializarPeliculas()
     {
-
-        // Inicializamos las categorías con Ids
-        var accion = new Categoria("Acción");
-        var cienciaFiccion = new Categoria("Ciencia Ficción");
-        var superhéroes = new Categoria("Superhéroes");
-        var animacion = new Categoria("Animación");
-        var fantasia = new Categoria("Fantasía");
-        var aventura = new Categoria("Aventura");
-        var terror = new Categoria("Terror");
-        var suspenso = new Categoria("Suspenso");
-        var thriller = new Categoria("Thriller");
-        var drama = new Categoria("Drama");
-        var musical = new Categoria("Musical");
-        var crimen = new Categoria("Crimen");
-        var gore = new Categoria("Gore");
-        var misterio = new Categoria("Misterio");
-        var romance = new Categoria("Romance");
-        var comedia = new Categoria("Comedia");
         
+        var accion = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Acción");
+        var cienciaFiccion = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Ciencia Ficción");
+        var superhéroes = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Superhéroes");
+        var animacion = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Animación");
+        var fantasia = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Fantasía");
+        var aventura = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Aventura");
+        var terror = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Terror");
+        var suspenso = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Suspenso");
+        var thriller = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Thriller");
+        var drama = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Drama");
+        var musical = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Musical");
+        var romance = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Romance");
+        var comedia = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Comedia");
+        var comediaNegra = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Comedia Negra");
+        var misterio = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Misterio");
+        var gore = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Gore");
+        var crimen = DataStore.Categorias.FirstOrDefault(c => c.Nombre == "Crimen");
+
         DataStore.Peliculas.AddRange(new List<Pelicula>
         {
             new Pelicula(
