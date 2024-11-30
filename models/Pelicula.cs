@@ -9,14 +9,14 @@ public class Pelicula
     public string Nombre { get; set; }
     public string Descripcion { get; set; }
     public string Director { get; set; }
-    public string[] Categorias { get; set; }
+    public List<Categoria> Categorias { get; set; }
     public DateTime AnioDeSalida { get; set; }
     public string ImagenBannerUrl { get; set; }
     public string ImagenPequeniaUrl { get; set; }
     public int Duracion { get; set; }
     public double Valoracion {get; set;}
 
-    public Pelicula(string nombre, string descripcion, string director, string[] categorias, DateTime anioDeSalida, string imagenBannerUrl, string imagenPequeniaUrl, int duracion, double valoracion)
+    public Pelicula(string nombre, string descripcion, string director, List<Categoria> categorias, DateTime anioDeSalida, string imagenBannerUrl, string imagenPequeniaUrl, int duracion, double valoracion)
     {
         Id = contadorId++;
         Nombre = nombre;
