@@ -92,5 +92,29 @@ namespace back.Controllers
             }
         }
 
+        [HttpPut("{idSesion}/liberarAsientos/")]
+        public IActionResult LiberarAsientos(int idSesion, [FromBody] List<int> asientosIds)
+        {
+            var sesion = DataStore.Sesiones.FirstOrDefault(s => s.Id == idSesion);
+
+            try
+            {
+                foreach (var idAsiento in asientosIds)
+                {
+                    var asiento = sesion.ListaAsientos.FirstOrDefault(a => a.Id == idAsiento);
+
+                    asiento.Ocupado = false; // Cambiar el estado del asiento a no ocupado
+                }
+
+                sesion.EliminarAsientos(asientosIds.Count);
+
+                return Ok($"Asientos actualizados correctamente en la sesión con ID {idSesion}.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error al actualizar los asientos: {ex.Message}");
+            }
+        }
+
     }
 }
