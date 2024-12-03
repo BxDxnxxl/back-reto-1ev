@@ -320,17 +320,25 @@ public static class InicializadorDatos
     private static void InicializarSesiones()
     {
         Random random = new Random();
-        DateTime fechaBase = new DateTime(2024, 11, 22);
 
-        for (int i = 0; i < 50; i++)
+
+        for (int i = 0; i < 70; i++)
         {
-    
+            
+            DateTime fechaBase = new DateTime(2024, 12, 5);
+        
+            Random random2 = new Random();
+
+            int diasAdicionales = random2.Next(0, 25);
+ 
+            DateTime fechaRandom = fechaBase.AddDays(diasAdicionales);
+            
             var pelicula = DataStore.Peliculas[random.Next(DataStore.Peliculas.Count)];
             var sala = DataStore.Salas[random.Next(DataStore.Salas.Count)];
 
             double descuento = Math.Round(random.NextDouble() * 0.5, 2);
 
-            DateTime fechaInicio = fechaBase.AddMinutes(random.Next(0, 1440));
+            DateTime fechaInicio = fechaRandom.AddMinutes(random.Next(0, 1440));
 
             Sesion sesion = new Sesion(
                 pelicula: pelicula,
